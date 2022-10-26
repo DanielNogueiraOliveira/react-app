@@ -1,38 +1,251 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #0D0657; 
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1{
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 10px;
+  padding: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.usuarios{
+  width: 99%;
+  height: 200px;
+  background: white;
+  margin-left: 10px;
+  padding-top:  5px;
+  border-radius: 5px;
+  margin-bottom: 2px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.titulo-pagamento{
+  text-align: center;
+}
+
+.dados-pagamento{
+  width: 99%;
+  height: 100vh;
+  background-color: #292b3f;
+  margin-left: 10px;
+  padding-top:  5px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usuarios-box{
+  display: flex;
+  flex-direction: row;
+  height: 190px;
+  background-color: #292b3f;
+  margin: 0 5px 0 5px;  
+}
+
+.usuarios-box-img {
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.usuarios-box-img img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.usuarios-box-name-id{
+  margin-left: 20px;
+  margin-top: 60px;
+}
+
+.usuarios-box-name-id h3{
+  color: white;
+}
+
+.usuarios-box-button{
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.usuarios-box-button button{
+  background-color: white;
+  color: #424242; 
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+.usuarios-box-button button:hover{
+  background-color: #C0D0FA;
+  color: white; 
+}
+
+/*Componente de pagamento*/
+
+.box-pagamentos{
+  background-color: #292b3f;
+  margin: 0 5px 0 5px;
+  height: 99vh;
+}
+
+.box-pagamentos-input{
+  width: 450px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid;
+  margin-top: 20px;
+  font-size: 20px; 
+  padding: 10px;
+  border: 1px solid #979797;
+}
+
+.select-box select{
+  width: 450px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #888888; 
+  border: 1px solid #979797;
+  padding: 5px;
+}
+.button-pagamento{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-pagamento button{
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  background-color: white;
+  color: #424242; 
+  font-size: 20px; 
+}
+
+.button-pagamento button:hover{
+  background-color: #C0D0FA;
+  color: white; 
+}
+
+/*Modal de pagamento com sucesso*/
+.modal-container{
+  width: 98%;
+  height: 100vh;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-sucesso{
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.modal-sucesso-titulo{
+  background-color: #292b3f;
+  height: 60px; 
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+  color: white;
+}
+
+.modal-sucesso-body{
+  background-color: white;
+  height: 138px; 
+  text-align: center;
+  padding: 40px;
+  font-size: 20px;
+}
+
+.div-button-paid-sucess{
+  background-color: #292b3f;
+  height: 60px; 
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.button-paid-sucess{
+  width: 100px;
+  height: 40px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  background-color: white;
+  color: #424242; 
+  font-size: 20px;
+}
+
+.button-paid-sucess:hover{
+  background-color: #C0D0FA;
+  color: white; 
+}
+
+.button-paid-error{
+  width: 100px;
+  height: 40px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  background-color: white;
+  color: #424242; 
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.button-paid-error:hover{
+  background-color: #C0D0FA;
+  color: white; 
+}
+
+@media only screen and (max-width: 411px){
+
+  h1{
+    font-size: 45px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .usuarios-box-img {
+    margin-left: 5px;
+    
   }
+
+  .usuarios-box-name-id{
+    margin-left: 10px;
+    margin-top: 45px;
+  }
+
+  .usuarios-box-button{
+    margin-right: 5px;
+  }
+
+  .usuarios-box-name-id h3{
+    font-size: 16px;
+  }
+
+
 }
