@@ -22,7 +22,7 @@ h1{
 .usuarios{
   width: 99%;
   height: 200px;
-  background: white;
+  background: #93d1ff;
   margin-left: 10px;
   padding-top:  5px;
   border-radius: 5px;
@@ -67,16 +67,17 @@ h1{
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid #93d7ff;
 }
 
 .usuarios-box-name-id{
-  margin-left: 20px;
-  margin-top: 60px;
+  margin-left: 34px;
+  margin-top: 41px;
 }
 
 .usuarios-box-name-id h3{
   color: white;
+  font-size: 31px;
 }
 
 .usuarios-box-button{
@@ -87,17 +88,17 @@ h1{
 
 .usuarios-box-button button{
   background-color: white;
-  color: #424242; 
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
+  color: #000; 
+  width: 90px;
+  height: 35px;
+  border-radius: 20px;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .usuarios-box-button button:hover{
   background-color: #C0D0FA;
-  color: white; 
+  color: #000; 
 }
 
 /*Componente de pagamento*/
