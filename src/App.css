@@ -29,6 +29,16 @@ h1{
   margin-bottom: 2px; 
 }
 
+.close-modal{
+  position: relative;
+    align-items: flex-end;
+    left: 58%;
+    width: 50px;
+    height: 24px;
+    bottom: 56%;
+    border-radius: 15px
+}
+
 .titulo-pagamento{
   text-align: center;
 }

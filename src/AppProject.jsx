@@ -7,8 +7,8 @@ export default function App(){
 
 	const [itens, setItens] = useState([]);
 	const [pagamentos, setPagamentos] = useState(false);
-	const [name, setName] = useState("Bruno");
-	const [idUser, setIdUser] = useState("Bruno");
+	const [name, setName] = useState("");
+	const [idUser, setIdUser] = useState("");
 
 	useEffect(()=>{
 		axios.get('https://www.mocky.io/v2/5d531c4f2e0000620081ddce',{method:'GET',})
