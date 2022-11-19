@@ -26,7 +26,7 @@ export default function AppPayment(props){
 	    cvv: 123,
 	    expiry_date: '01/20',
 	  },
-	];
+	]; 
 	
 	var inputDoValor;
 	var selectCartao;
@@ -68,6 +68,8 @@ export default function AppPayment(props){
 			}
 	}
 
+
+	
 	function handleChange(e){
 		console.log("e.target.value ", e.target.value);
 		console.log("CARDS ", cards[e.target.value]);
@@ -101,10 +103,17 @@ export default function AppPayment(props){
     }
       
 	return(
-		<>		
+		<>	
+
 			{ !modal &&	
 				<div>
+    
+        <div className='modal__title'>
+          <div className='modal__name' id='modal__name'> Pagamento para {[props.payment[0]]} </div>
+          <div className='buttonClose'><button className='close' onClick={props.onClose}></button></div>
+        </div>
 					<h1 className="titulo-pagamento"> Pagamento para <i>{props.nameUser}</i></h1>
+					<div className='buttonClose'><button className='close' onClick={props.onClose}></button></div>
 					<div className="dados-pagamento">
 						<div className="box-pagamentos">
 							<input type="text" onKeyPress={(event)=>{formatCurrency(event)}} placeholder="R$ 0,00" 
