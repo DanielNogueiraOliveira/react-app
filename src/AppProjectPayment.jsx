@@ -102,18 +102,14 @@ export default function AppPayment(props){
     	setModal(false)
     }
       
-	const closeModal = ()=> {
-		window.location.reload();
-	}
 	return(
 		<>	
 
 			{ !modal &&	
-				<div onClick={handleOutsideClick}>
+				<div>
     
    
 					<h1 className="titulo-pagamento"> Pagamento para <i>{props.nameUser}</i></h1>
-					<button className="button-paid-error" onClick={closeModal}>Fechar</button>
 					<div className="dados-pagamento">
 						<div className="box-pagamentos">
 							<input type="text" onKeyPress={(event)=>{formatCurrency(event)}} placeholder="R$ 0,00" 
@@ -133,7 +129,7 @@ export default function AppPayment(props){
 							</div>
 						</div>
 					</div>
-					<Message sendPayment={sendPayment} setSenPayment={setSendPayment} message={message} closeMessage={()=> props.setShowModal(false)}/>
+
 
 				</div>
 				
