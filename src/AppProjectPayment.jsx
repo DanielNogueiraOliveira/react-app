@@ -27,7 +27,11 @@ export default function AppPayment(props){
 	    expiry_date: '01/20',
 	  },
 	]; 
-	
+	function handleOutsideClick(e){
+		if(e.target.id === 'modal')
+		 props.onClose()
+	  }
+
 	var inputDoValor;
 	var selectCartao;
 	const submitValue = () => {
@@ -106,12 +110,9 @@ export default function AppPayment(props){
 		<>	
 
 			{ !modal &&	
-				<div>
+				<div onClick={handleOutsideClick}>
     
-        <div className='modal__title'>
-          <div className='modal__name' id='modal__name'> Pagamento para {[props.payment[0]]} </div>
-          <div className='buttonClose'><button className='close' onClick={props.onClose}></button></div>
-        </div>
+   
 					<h1 className="titulo-pagamento"> Pagamento para <i>{props.nameUser}</i></h1>
 					<div className='buttonClose'><button className='close' onClick={props.onClose}></button></div>
 					<div className="dados-pagamento">
@@ -133,7 +134,10 @@ export default function AppPayment(props){
 							</div>
 						</div>
 					</div>
+					<Message sendPayment={sendPayment} setSenPayment={setSendPayment} message={message} closeMessage={()=> props.setShowModal(false)}/>
+
 				</div>
+				
 			}	
 				{modal && sucesso && <AppPaidSucess/>}
 				{modal && !sucesso && <AppPaidError changeModal={changeErro} />}
