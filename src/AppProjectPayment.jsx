@@ -26,10 +26,7 @@ export default function AppPayment(props){
 	    expiry_date: '01/20',
 	  },
 	]; 
-	function handleOutsideClick(e){
-		if(e.target.id === 'AppPayment')
-		 props.onClose()
-	  }
+
 	var inputDoValor;
 	var selectCartao;
 	const submitValue = () => {
@@ -99,7 +96,9 @@ export default function AppPayment(props){
 
         e.currentTarget.value = valor;
     }
-      
+	const closeModal = ()=> {
+		window.location.reload();
+	}
 	return(
 		<>	
 
@@ -108,8 +107,8 @@ export default function AppPayment(props){
     
    
 					<h1 className="titulo-pagamento"> Pagamento para <i>{props.nameUser}</i></h1>
-					<div className="dados-pagamento" onClick={handleOutsideClick}>
-					<button className='close-modal' onClick={() => onClose}>close</button>
+					<div className="dados-pagamento">
+					<button className='close-modal' onClick={closeModal}>close</button>
 						<div className="box-pagamentos">
 							<input type="text" onKeyPress={(event)=>{formatCurrency(event)}} placeholder="R$ 0,00" 
 							    ref={input => inputDoValor = input }    onChange={(e)=> setValor(e.target.value)} className="box-pagamentos-input" />
